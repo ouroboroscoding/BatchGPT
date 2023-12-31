@@ -74,7 +74,7 @@ def batch(
 		# Create the template keys from each key in the data dict
 		dTranslate = { '%s%s%s' % (
 			delimiter, k, delimiter
-		) for k in d }
+		): d[k] for k in d }
 
 		# Replace the variables in the template
 		sPrompt = strtr(template, dTranslate)
